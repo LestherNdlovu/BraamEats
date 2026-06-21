@@ -365,8 +365,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update narrative zones and scroll indicator
         updateOverlays(currentPercent);
         
-        // Update diagnostics overlay
-        updateDebug();
         
         requestAnimationFrame(tick);
     }
@@ -447,32 +445,6 @@ document.addEventListener('DOMContentLoaded', () => {
         targetPercent = Math.max(0, Math.min(1, p));
     });
 
-    // Floating diagnostics dashboard (temporary for testing)
-    const debugDiv = document.createElement('div');
-    debugDiv.style.position = 'fixed';
-    debugDiv.style.bottom = '10px';
-    debugDiv.style.right = '10px';
-    debugDiv.style.background = 'rgba(17, 17, 17, 0.9)';
-    debugDiv.style.color = '#FF3B1F';
-    debugDiv.style.padding = '12px';
-    debugDiv.style.fontFamily = 'monospace';
-    debugDiv.style.fontSize = '11px';
-    debugDiv.style.zIndex = '9999';
-    debugDiv.style.borderRadius = '4px';
-    debugDiv.style.border = '1px solid rgba(255, 255, 255, 0.1)';
-    debugDiv.style.pointerEvents = 'none';
-    document.body.appendChild(debugDiv);
-
-    function updateDebug() {
-        debugDiv.innerHTML = `
-            scroll: ${window.scrollY}px / max: ${maxScroll}px<br>
-            offset: ${scrollOffset.toFixed(1)}px<br>
-            target: ${targetPercent.toFixed(4)}<br>
-            current: ${currentPercent.toFixed(4)}<br>
-            canvas: ${canvas.width}x${canvas.height}<br>
-            assets: ${loadedCount}/${totalAssets}
-        `;
-    }
 
     // Listen to mouse movement for interactive parallax
     window.addEventListener('mousemove', (e) => {
