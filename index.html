@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crate | Big flavor. Small wait. Smashed Burgers in Braam</title>
+    <meta name="description" content="Crate serves loaded smash burgers, crispy slap fries, and bottomless cool drinks built for varsity life in Braamfontein. Fresh, fast, and student-budget friendly.">
+    
+    <!-- Google Fonts: Outfit (Heading Grotesk) & JetBrains Mono (Monospace details) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="index.css?v=1.0.2">
+</head>
+<body>
+
+    <!-- Premium Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <h1 class="preloader-logo">CRATE</h1>
+            <div class="progress-bar-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+            <div id="preloader-text" class="preloader-text">0% LOADED</div>
+        </div>
+    </div>
+
+    <!-- Fixed Glassmorphism Navbar -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" id="nav-logo-link">CRATE</a>
+            <div class="nav-links">
+                <a href="#menu" class="nav-link" id="menu-trigger">Menu</a>
+                <a href="#locations" class="nav-link">Locations</a>
+                <a href="#rewards" class="nav-link">Rewards</a>
+                <a href="#catering" class="nav-link">Catering</a>
+            </div>
+            <button class="btn btn-primary nav-cta" id="nav-order-btn">Order Now</button>
+            <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Slide-over Menu Drawer -->
+    <div id="menu-drawer" class="menu-drawer" aria-hidden="true">
+        <div class="drawer-overlay" id="drawer-overlay"></div>
+        <div class="drawer-content">
+            <div class="drawer-header">
+                <h2>CRATE MENU</h2>
+                <button class="drawer-close" id="drawer-close" aria-label="Close Menu">&times;</button>
+            </div>
+            <div class="drawer-body">
+                <!-- Smash Burgers -->
+                <div class="menu-section">
+                    <div class="menu-section-header">
+                        <span class="mono-label">01 / SIGNATURE SMASH</span>
+                        <h3>SMASHED BURGERS</h3>
+                    </div>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Braam Classic</h4>
+                                <p>Single smash patty, real cheddar, pickles, house sauce, toasted brioche.</p>
+                            </div>
+                            <span class="menu-item-price">R65</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Double Jozi Smash <span class="badge">BEST SELLER</span></h4>
+                                <p>Double smash patty, double cheddar, pickles, house sauce, toasted brioche.</p>
+                            </div>
+                            <span class="menu-item-price">R85</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>The Witsie Melt</h4>
+                                <p>Double patty, caramelized onions, white cheddar, mustard mayo, griddled toast.</p>
+                            </div>
+                            <span class="menu-item-price">R95</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Classic Grilled Burgers -->
+                <div class="menu-section">
+                    <div class="menu-section-header">
+                        <span class="mono-label">02 / CLASSIC BURGERS</span>
+                        <h3>FLAME-GRILLED</h3>
+                    </div>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Flame-Grilled Beef</h4>
+                                <p>Flame-grilled beef patty, lettuce, tomato, red onion, Crate BBQ sauce.</p>
+                            </div>
+                            <span class="menu-item-price">R55</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Crispy Peri-Peri Chicken</h4>
+                                <p>Crispy breast fillet, fresh lettuce, tomato, peri-peri mayo on toasted brioche.</p>
+                            </div>
+                            <span class="menu-item-price">R59</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Spiced Falafel Burger</h4>
+                                <p>House chickpea patty, fresh cucumber, tzatziki, crispy lettuce.</p>
+                            </div>
+                            <span class="menu-item-price">R50</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shawarmas -->
+                <div class="menu-section">
+                    <div class="menu-section-header">
+                        <span class="mono-label">03 / SHAWARMAS</span>
+                        <h3>WRAPS & PITAS</h3>
+                    </div>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Classic Chicken Shawarma</h4>
+                                <p>Tender shredded chicken, hummus, garlic sauce, pickles, slap chips, wrapped in warm pita.</p>
+                            </div>
+                            <span class="menu-item-price">R69</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Spiced Beef Shawarma</h4>
+                                <p>Shredded spiced beef, tahini, tzatziki, fresh tomato, onion, wrapped in warm pita.</p>
+                            </div>
+                            <span class="menu-item-price">R75</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Falafel & Hummus Wrap</h4>
+                                <p>Crispy falafel balls, hummus, cucumber, red onion, garlic sauce, wrapped in warm pita.</p>
+                            </div>
+                            <span class="menu-item-price">R55</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fries & Sides -->
+                <div class="menu-section">
+                    <div class="menu-section-header">
+                        <span class="mono-label">04 / FRIES & SIDES</span>
+                        <h3>SIDES</h3>
+                    </div>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Campus Slap Fries</h4>
+                                <p>Fresh-cut local potatoes, tossed in sea salt or dynamic peri-peri.</p>
+                            </div>
+                            <span class="menu-item-price">R35</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Masala Spiced Fries</h4>
+                                <p>Fries tossed in spicy aromatic Jozi masala spice blend.</p>
+                            </div>
+                            <span class="menu-item-price">R38</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Loaded Braam Fries</h4>
+                                <p>Smashed beef crumble, melted cheese sauce, pickles, grilled onions, chakalaka drizzle.</p>
+                            </div>
+                            <span class="menu-item-price">R59</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drinks & Shakes -->
+                <div class="menu-section">
+                    <div class="menu-section-header">
+                        <span class="mono-label">05 / DRINKS & SHAKES</span>
+                        <h3>LIQUIDS</h3>
+                    </div>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Bottomless Cool Drink</h4>
+                                <p>Self-serve fountain cool drinks. Free refills between lectures.</p>
+                            </div>
+                            <span class="menu-item-price">R25</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Cream Soda Malted Shake</h4>
+                                <p>Vanilla ice cream blended with sweet green cream soda syrup, malted milk, whipped cream.</p>
+                            </div>
+                            <span class="menu-item-price">R45</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Stoney Ginger Beer</h4>
+                                <p>Local extra-fiery ginger beer can.</p>
+                            </div>
+                            <span class="menu-item-price">R18</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="drawer-footer">
+                <button class="btn btn-primary w-full" id="drawer-order-btn">Start Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scrollytelling Pinned Workspace -->
+    <main class="scrolly-container" id="scroll-workspace">
+        
+        <!-- Sticky Canvas Area -->
+        <div class="sticky-canvas-wrapper">
+            <canvas id="burger-canvas"></canvas>
+            
+            <!-- Radial backdrop gradient for extra depth, blends with #FAFAF8 -->
+            <div class="canvas-glow"></div>
+
+            <!-- Overlay Text Sections (triggered by scroll) -->
+            <div class="narrative-overlays">
+                
+                <!-- Beat 1: Intro (0-15%) -->
+                <section class="beat-section active" id="beat-intro">
+                    <div class="beat-inner centered">
+                        <span class="badge badge-accent animate-pop">BRAAM EXCLUSIVE</span>
+                        <h1 class="hero-title">CRATE</h1>
+                        <p class="hero-subtitle">Big flavor. Small wait.</p>
+                        <p class="hero-supporting">Smashed patties, crispy slap fries, and bottomless cool drinks — built for varsity life in the heart of Jozi.</p>
+                        <div class="scroll-down-hint">
+                            <span class="mono-label">SCROLL TO BUILD</span>
+                            <div class="mouse-icon">
+                                <div class="wheel"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Beat 2: The Base (15-40%) -->
+                <section class="beat-section" id="beat-base">
+                    <div class="beat-inner left-aligned">
+                        <span class="mono-label">// THE BOTTOM LINE</span>
+                        <h2>Smashed,<br>not stacked.</h2>
+                        <p>100% local beef, smashed hard on a screaming-hot flat-top for maximum caramelized crust.</p>
+                        <p>Toasted brioche bun, because soggy bread is a crime against humanity.</p>
+                    </div>
+                </section>
+
+                <!-- Beat 3: Layers & Flavor (40-65%) -->
+                <section class="beat-section" id="beat-layers">
+                    <div class="beat-inner right-aligned">
+                        <span class="mono-label">// THE LAYERS</span>
+                        <h2>Every layer<br>earns its spot.</h2>
+                        <ul class="feature-list">
+                            <li>
+                                <strong class="text-accent">Melted real cheddar:</strong>
+                                <span>Two layers deep for gooey perfection.</span>
+                            </li>
+                            <li>
+                                <strong class="text-accent">House peri-special sauce:</strong>
+                                <span>Sweet, tangy, with a mild peri-peri kick.</span>
+                            </li>
+                            <li>
+                                <strong class="text-accent">Pickles & griddled onion:</strong>
+                                <span>Sharp crunch that cuts right through the richness.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Beat 4: The Stack (65-85%) -->
+                <section class="beat-section" id="beat-stack">
+                    <div class="beat-inner left-aligned">
+                        <span class="mono-label">// SPEED & VAL</span>
+                        <h2>Built to order.<br>Gone in minutes.</h2>
+                        <p>From flat-top grill to your hands in under 4 minutes. Speed is our promise.</p>
+                        <p>No frills, no fillers, no crazy prices — just lekker ingredients that make a burger epic.</p>
+                    </div>
+                </section>
+
+                <!-- Beat 5: The Drop & CTA (85-100%) -->
+                <section class="beat-section" id="beat-drop">
+                    <div class="beat-inner centered">
+                        <span class="mono-label">// READY TO EAT</span>
+                        <h2 class="drop-title">Hungry? We're three minutes away.</h2>
+                        <p class="drop-subtitle">Crate. Real food, real fast, real cheap.</p>
+                        <div class="cta-group">
+                            <button class="btn btn-primary btn-large btn-shadow" id="cta-order-now">Order Now</button>
+                            <button class="btn btn-secondary btn-large" id="cta-view-menu">View the Menu</button>
+                        </div>
+                        <p class="micro-copy">Open till 2am on Juta Street. 15% student discount with a valid Wits or UJ student card.</p>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar Scroll Progress Bar -->
+        <div class="scroll-tracker" aria-hidden="true">
+            <div class="tracker-track">
+                <div class="tracker-fill" id="tracker-fill"></div>
+            </div>
+            <div class="tracker-steps">
+                <div class="tracker-step active" data-percent="0">INTRO</div>
+                <div class="tracker-step" data-percent="25">BASE</div>
+                <div class="tracker-step" data-percent="50">FLAVOR</div>
+                <div class="tracker-step" data-percent="75">THE STACK</div>
+                <div class="tracker-step" data-percent="95">THE DROP</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Standard Grid Sections below the scrollytelling container -->
+    <section class="static-section grid-section" id="locations">
+        <div class="container">
+            <span class="mono-label">// FIND US</span>
+            <h2 class="section-title">IN THE HEART OF BRAAM</h2>
+            
+            <div class="locations-grid">
+                <div class="card location-card">
+                    <div class="card-header">
+                        <h4>CRATE BRAAMFONTEIN</h4>
+                        <span class="status-badge status-open">OPEN NOW</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="location-address">73 Juta Street, Braamfontein, Johannesburg, 2001</p>
+                        <p class="location-distance"><strong>200m</strong> from Wits East Campus / Juta Walk</p>
+                        <div class="hours-list">
+                            <div class="hours-row"><span>Mon - Thu</span><span>10:30 AM - 11:00 PM</span></div>
+                            <div class="hours-row highlight"><span>Fri - Sat</span><span>10:30 AM - 2:00 AM</span></div>
+                            <div class="hours-row"><span>Sun</span><span>11:00 AM - 9:00 PM</span></div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://maps.google.com" target="_blank" class="btn btn-secondary btn-sm">Get Directions</a>
+                    </div>
+                </div>
+
+                <div class="card promo-card bg-charcoal">
+                    <span class="mono-label">STUDENT SPECIAL</span>
+                    <h3>LATE NIGHT STUDYING?</h3>
+                    <p>Show your Wits or UJ student card after 9 PM and get a free upgrade to Loaded Braam Fries with any Double Jozi Smash order.</p>
+                    <div class="promo-code">CODE: BRAAM_FUEL</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sign up Section -->
+    <section class="static-section signup-section">
+        <div class="container container-sm">
+            <h2 class="signup-title">JOIN THE CLUB. GET FREE SLAP FRIES.</h2>
+            <p class="signup-subtitle">Sign up for the Crate Club and get a free cool drink on your next order, plus exclusive student drops.</p>
+            <form class="signup-form" onsubmit="event.preventDefault(); alert('Welcome to Crate Club! Code: CRATE_FREE_DRINK emailed to your inbox.');">
+                <input type="email" placeholder="Enter your .ac.za or personal email address" required aria-label="Email Address">
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3 class="footer-logo">CRATE</h3>
+                <p>Smashed beef, loaded slap fries, bottomless cups. The ultimate Jozi student dining experience.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                    <a href="#" aria-label="TikTok">TikTok</a>
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h5>LINKS</h5>
+                <a href="#menu" id="footer-menu-link">Menu</a>
+                <a href="#locations">Locations</a>
+                <a href="#rewards">Rewards</a>
+                <a href="#catering">Catering</a>
+            </div>
+            <div class="footer-legal">
+                <h5>LEGAL</h5>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Student Discount Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; 2026 Crate QSR South Africa. All rights reserved.</p>
+                <p class="mono-label">DESIGNED FOR SPEED</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JS Application script -->
+    <script src="index.js?v=1.0.2"></script>
+</body>
+</html>
